@@ -86,4 +86,20 @@ contract Campaign {
         
         request.complete = true;
     } 
+   
+    //gonna return various values as required on the showCampaign Page
+    function getSummary() public view returns (uint, uint, uint, uint, address) { 
+        return ( 
+            minimumContribution, 
+            this.balance, 
+            requests.length, 
+            approversCount, 
+            manager
+        );
+    } 
+     
+    //returns total requests count
+    function getRequestsCount() public view returns (uint) {
+        return requests.length;
+    }
 } 

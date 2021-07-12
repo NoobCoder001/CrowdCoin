@@ -3,7 +3,7 @@ import Web3 from 'web3';
 
 let web3; 
 
-if (typeof window !== 'undefined' && window.web3 !== 'undefined') {  //our code is executed in the browser and metamask is present
+if (typeof window !== 'undefined' && window.web3 !== 'undefined') {  //our code is executed in the browser if metamask is present
   //we are in browser and metamask is running 
   web3 = new Web3(window.web3.currentProvider);   
 } else { 
